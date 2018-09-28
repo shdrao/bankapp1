@@ -28,14 +28,14 @@ public class DbUtil {
 //	}	
 //	@Bean(name="dbconfig")
 	public Connection getConnection() {
-		DbConfig dbConfig = new DbConfig();
-		dbConfig.setDbPassword(env.getProperty("password"));
-		dbConfig.setDbUser(env.getProperty("user"));
-		dbConfig.setDbUrl(env.getProperty("url"));
+//		DbConfig dbConfig = new DbConfig();
+//		dbConfig.setDbPassword(env.getProperty("password"));
+//		dbConfig.setDbUser(env.getProperty("user"));
+//		dbConfig.setDbUrl(env.getProperty("url"));
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection(dbConfig.getDbUrl(),dbConfig.getDbUser(),dbConfig.getDbPassword());
+			connection = DriverManager.getConnection(env.getProperty("url"),env.getProperty("user"),env.getProperty("password"));
 			System.out.println("Connected");
 		} catch (Exception e) {
 			e.printStackTrace();

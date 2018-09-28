@@ -13,10 +13,11 @@ public class Application {
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		BankAccountController bankAccountController = context.getBean("bankAccountController",
 				BankAccountController.class);
-	System.out.println(bankAccountController.getBalance(1001));
+		System.out.println(bankAccountController.getBalance(1001));
+		
 //System.out.println(bankAccountController.deposit(1001, 100));
-	//	System.out.println(bankAccountController.fundTransfer(1001, 1002, 100));
-		//System.out.println(bankAccountController.withdraw(1001, 20));
+		// System.out.println(bankAccountController.fundTransfer(1001, 1002, 100));
+		// System.out.println(bankAccountController.withdraw(1001, 20));
 
 	}
 

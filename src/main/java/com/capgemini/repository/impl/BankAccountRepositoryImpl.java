@@ -4,11 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.capgemini.database.DbUtil;
+import com.capgemini.entity.BankAccount;
 import com.capgemini.repository.BankAccountRepository;
 
 @Repository
@@ -87,5 +89,35 @@ public class BankAccountRepositoryImpl implements BankAccountRepository {
 			return false;
 		}
 
+	}
+
+	@Override
+	public boolean addBankAccount(BankAccount account) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public BankAccount findBankAccountById(long accountId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BankAccount> findAllBankAccounts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BankAccount updateBankAccount(BankAccount account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteBankAccount(long accountId) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
